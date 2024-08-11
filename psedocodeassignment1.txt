@@ -1,0 +1,78 @@
+1] Write a pseudocode to calculate the area of a circle given its radius. The radius will be provided by the user. Use the formula Area= π×radius2, assuming π=3.14159
+
+1. Start
+2. Declare variable `radius`
+3. Declare constant `PI = 3.14159`
+4. Input the value of `radius` from the user
+5. Calculate the area using the formula `area = PI * radius * radius`
+6. Output the value of `area`
+7. End
+
+
+2] Develop pseudocode that takes a string input from the user and returns the string in reverse order.
+
+1. Start
+2. Declare variable `inputString`
+3. Declare variable `reversedString`
+4. Input the value of `inputString` from the user
+5. Set `reversedString = ""`
+6. For each character `ch` in `inputString` from last to first:
+    a. Append `ch` to `reversedString`
+7. Output the value of `reversedString`
+8. End
+
+3] Develop pseudocode to sort an array of integers in ascending order using the selection sort algorithm. The user will input the size of the array followed by the integers. The selection sort algorithm improves upon the simpler linear search by systematically finding the minimum or maximum from the unsorted section and placing it atthe beginning or end of the sorted section.
+
+1. Start
+2. Declare variable `n` (size of the array)
+3. Input the value of `n` from the user
+4. Declare array `arr` of size `n`
+5. For `i` from 0 to `n-1`:
+    a. Input the value of `arr[i]` from the user
+6. For `i` from 0 to `n-2`:
+    a. Set `minIndex = i`
+    b. For `j` from `i+1` to `n-1`:
+        i. If `arr[j] < arr[minIndex]`, set `minIndex = j`
+    c. If `minIndex != i`, swap `arr[i]` with `arr[minIndex]`
+7. Output the sorted array `arr`
+8. End
+
+
+4] Write pseudocode to check if an expression with parentheses (round brackets), square brackets, and curly braces is balanced. An expression is balanced if brackets open and close in the correct order, with every opening bracket having a corresponding closing bracket. The pseudocode should handle nested and interleaved structures as well.
+
+1. Start
+2. Declare a stack `stack` (initialize as empty)
+3. Input the expression `expr` from the user
+4. For each character `ch` in `expr`:
+    a. If `ch` is an opening bracket ('(', '[', '{'):
+        i. Push `ch` onto `stack`
+    b. Else if `ch` is a closing bracket (')', ']', '}'):
+        i. If `stack` is empty, return "Unbalanced" and exit
+        ii. Pop the top element from `stack` and store in `top`
+        iii. If `ch` is ')' and `top` is not '(', return "Unbalanced" and exit
+        iv. If `ch` is ']' and `top` is not '[', return "Unbalanced" and exit
+        v. If `ch` is '}' and `top` is not '{', return "Unbalanced" and exit
+5. If `stack` is not empty, return "Unbalanced" and exit
+6. Return "Balanced"
+7. End
+
+
+5] Create pseudocode to find the length of the longest consecutive elements sequence in an unsorted array of integers. The sequence is composed of consecutive numbers that can appear in any order within the array.
+
+1. Start
+2. Declare an array `arr`
+3. Input the size of the array `n`
+4. Input the elements of `arr`
+5. Convert `arr` into a set called `numSet` to remove duplicates and allow O(1) lookups
+6. Declare variable `maxLength` and set it to 0
+7. For each element `num` in `numSet`:
+    a. If `num - 1` is not in `numSet` (start of a new sequence):
+        i. Declare variable `currentNum` and set it to `num`
+        ii. Declare variable `currentStreak` and set it to 1
+        iii. While `currentNum + 1` is in `numSet`:
+            1. Increment `currentNum` by 1
+            2. Increment `currentStreak` by 1
+        iv. Set `maxLength = max(maxLength, currentStreak)`
+8. Output the value of `maxLength`
+9. End
+
