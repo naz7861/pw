@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Elements</title>
+    <link rel="stylesheet" href="styledelements.css">
+</head>
+<body>
+
+    <!-- Buttons Section -->
+    <section>
+        <h2>Buttons</h2>
+        <button class="btn primary">Primary Button</button>
+        <button class="btn secondary">Secondary Button</button>
+        <button class="btn danger">Danger Button</button>
+    </section>
+
+    <!-- Accordions Section -->
+    <section class="accordion">
+        <h2>Accordions</h2>
+        <div class="accordion-item">
+            <h3 class="accordion-header">Section 1</h3>
+            <div class="accordion-content">Content for section 1...</div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header">Section 2</h3>
+            <div class="accordion-content">Content for section 2...</div>
+        </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section>
+        <h2>Badges</h2>
+        <span class="badge success">Success</span>
+        <span class="badge warning">Warning</span>
+        <span class="badge error">Error</span>
+    </section>
+
+    <script>
+        // Script to toggle accordion sections
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>
+

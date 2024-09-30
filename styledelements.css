@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #0056b3;
+}
+
+.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.secondary:hover {
+    background-color: #5a6268;
+}
+
+.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.danger:hover {
+    background-color: #c82333;
+}
+
+/* Accordion Styles */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #e2e6ea;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Badge Styles */
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    margin-right: 10px;
+}
+
+.success {
+    background-color: #28a745;
+}
+
+.warning {
+    background-color: #ffc107;
+}
+
+.error {
+    background-color: #dc3545;
+}
+
+.badge:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
